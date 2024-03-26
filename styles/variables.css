@@ -2,3 +2,368 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+.theme_auto {
+  --accent-color: rgba(255, 0, 112, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --text-color: rgba(0, 0, 40, 1);
+  --decoration-color: var(--accent-color);
+  --background-image: url("../images/cover-image-dark.png");
+  --display-state: flex;
+  --background-color: rgba(0, 0, 40, 1);
+  --hover-border-color: rgba(255, 0, 112, 0.4);
+}
+
+
+
+
+@media (min-width: 768px) {                   /* Планшет */
+  
+  .header {
+    min-height: 1024px;
+    min-width: 768px;
+  }
+
+  .lamp {
+    left: 687px;
+    top: 20px;
+  }
+
+  .corner-top-header {
+    margin: 20px 20px auto auto;
+  }
+
+  .header__theme-menu-list {
+    margin-block-start: 147px;
+    margin-inline-end: 20px;
+  }
+
+  .header__theme-menu-item {
+    width: 70px;
+    height: 26px;
+  }
+
+  .decorated-zone {
+    padding: 0;
+    background-size: 1638px 1024px;
+  }
+
+  h1 {
+    margin-block-start: 173px;
+  }
+
+  .header-text {
+    max-width: 364px;
+    max-height: 117px;
+    margin: 164px 20px auto auto;
+  }
+
+  .corner-bottom-header {
+    margin: 138px auto 20px 20px;
+  } 
+
+}
+
+@media (min-width: 1024px) {                      /* Комп */
+
+  .header {
+    min-height: 768px;
+    height: 768px;
+  }
+
+  .decorated-zone {
+    background-size: 1229px 768px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-block-start: 20px;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: IBM Plex Mono, sans-serif;
+    font-size: 157px;
+    font-weight: 700;
+    line-height: 129.53px;
+    text-align: left;
+    margin-block-start: 274px;
+  }
+
+  .header-text {
+    min-width: 491px;
+    margin-block-start: 113px;
+  }
+
+  .corner-top-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+  }
+
+  .lamp {
+    position: absolute;
+    top: 20px;
+    right: 29px;
+    width: 52px;
+    left: auto;
+  }
+
+  .corner-bottom-header {
+    margin: 90px auto auto 20px;
+  }
+} 
+
+
+@media (min-width: 768px) {                 /* Планшет */
+
+  .first-block {
+    margin-block-start: 20px;
+    padding: 0 10px 0 10px;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .middle-block {
+    margin-block-start: 30px;
+    padding: 0 10px 0 10px;
+  }
+
+  h2 {
+    font-family: IBM Plex Mono, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
+    text-align: left;
+    margin-block-start: 20px;
+  }
+
+  .middle-block-title {
+    max-width: 236px;
+    max-height: 70px;
+    margin-block-start: 30px;
+  }
+
+  .last-block-title {
+    margin-block-start: 30px;
+  }
+
+  .last-block {
+    grid-template-columns: 1fr 2fr;
+    margin-block-start: 30px;
+    padding: 0 10px 0 10px;
+    gap: 20px;
+  }
+
+  .subtitle {
+    margin-block-start: 30px;
+  }
+
+  .gallery-title {
+    margin-block-start: 80px;
+  }
+
+  .gallery {
+    padding: 0 10px 0 10px;
+    margin-block-start: 30px;
+  }
+
+  .gallery-position {
+    display: grid;
+    gap: 20px;
+  }
+
+  picture {
+    width: 100%;
+    gap: 20px;
+    margin-block-start: 20px;
+    grid-template-columns: 230px 230px 230px;
+    grid-template-rows: 192px 230px 318px;
+  }
+
+  .gallery-item1 {
+    width: 479px;
+    height: 192px;
+    object-fit: cover;
+  }
+  
+  .gallery-item2 {
+    width: 229px;
+    height: 441px;
+    object-fit: cover;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .gallery-item3 {
+    width: 229px;
+    height: 568px;
+    object-fit: cover;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  .gallery-item4 {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  .gallery-item5 {
+    width: 479px;
+    height: 318px;
+    object-fit: cover;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+
+}
+
+
+@media (min-width: 1024px) {                /* Комп */
+
+  .first-block {
+    grid-template-columns: 1fr 649px;
+  }
+
+  .middle-block-title {
+    max-width: 314.96px;
+  }
+
+  .middle-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 58px 30px 400px;
+    gap: 20px;
+  }
+
+  .multitasking {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .food {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .gadgets {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+
+  h3 {
+    max-height: 23px;
+  }
+
+  .last-block {
+    gap: 10px;
+  }
+
+  .gallery {
+    max-width: 100%;
+  }
+
+  .gallery-position {
+    max-width: 100%;
+  }
+
+  picture {
+    grid-template-columns: 315px 315px 315px;
+    grid-template-rows: 260px 321px 428px;
+  }
+
+  .gallery-item1 {
+    width: 649px;
+    height: 260px;
+  }
+
+  .gallery-item2 {
+    width: 315px;
+    height: 595px;
+  }
+
+  .gallery-item3 {
+    width: 315px;
+    height: 768px;
+  }
+
+  .gallery-item4 {
+    width: 315px;
+    height: 315px;
+  }
+
+  .gallery-item5 {
+    width: 649px;
+    height: 428px;
+  }
+
+}
+
+@media (min-width: 768px) {                     /* Планшет */
+  
+  .footer {
+    margin-block-start: 60px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    min-height: 1024px;
+  }
+
+  .corner-top-footer {
+    margin: 20px 20px auto 723px;
+    max-width: 100vw;
+  }
+
+  .footer-decoration {
+    margin: 0;
+    min-width: 748px;
+    min-height: 1004px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-title {
+    padding-block-end: 170px;
+  }
+
+  .corner-bottom-footer {
+    margin-inline-start: 10px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  
+  .footer {
+    min-height: 768px;
+    height: 768px;
+  }
+
+  .footer-decoration {
+    min-height: 768px;
+    height: 768px;
+    width: 100%;
+  }
+
+  .corner-top-footer {
+    margin: 20px 20px auto 979px;
+  }
+
+  .footer-title {
+    margin: 136px auto auto ;
+    padding: 0;
+  }
+
+  .corner-bottom-footer {
+    margin: auto auto 20px 10px;
+  }
+}
+
