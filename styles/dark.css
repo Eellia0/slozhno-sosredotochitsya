@@ -14,4 +14,5 @@
   --display-state: flex;
   --background-color: rgba(0, 0, 40, 1);
   --hover-border-color: rgba(255, 0, 112, 0.4);
+  --button-border-color: var(--accent-color);
 }
