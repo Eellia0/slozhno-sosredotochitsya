@@ -17,4 +17,17 @@
   --button-border-color: var(--accent-color);
 }
 
-
+@media (prefers-color-scheme: dark) {
+  :root {
+  --accent-color: rgba(255, 0, 112, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --text-color: rgba(0, 0, 40, 1);
+  --about-color: rgb(226,167,193);
+  --decoration-color: var(--accent-color);
+  --background-image: url("../images/cover-image-dark.png");
+  --display-state: flex;
+  --background-color: rgba(0, 0, 40, 1);
+  --hover-border-color: rgba(255, 0, 112, 0.4);
+  --button-border-color: var(--accent-color);
+  }
+}

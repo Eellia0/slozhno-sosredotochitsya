@@ -5,8 +5,7 @@
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position-x: center;
-  object-fit: cover;
-  background-size: auto 100vh;
+  background-size: cover;
   background-color: var(--background-color);
   background-attachment: fixed;
 }
@@ -39,6 +38,7 @@
   flex-direction: row;
   align-items: center;
   right: 20px;
+  top: 10px;
 }
 
 .rec::after {
@@ -90,29 +90,12 @@
   border: 1px solid var(--button-border-color);
 }
 
-.header__theme-menu-button_type_dark:hover {
-  border: 1px solid var(--hover-border-color);
-}
-
-.header__theme-menu-button_type_auto:hover {
-  border: 1px solid var(--hover-border-color);
-}
-
-.header__theme-menu-button_type_light:hover {
-  border: 1px solid var(--hover-border-color);
-}
-
-.header__theme-menu-button_type_dark:focus-visible {
+.header__theme-menu-button:hover {
   outline: none;
-  border-bottom: 1px solid var(--decoration-color);
+  border: 1px solid var(--hover-border-color);
 }
 
-.header__theme-menu-button_type_auto:focus-visible {
-  outline: none;
-  border-bottom: 1px solid var(--decoration-color);
-}
-
-.header__theme-menu-button_type_light:focus-visible {
+.header__theme-menu-button:focus {
   outline: none;
   border-bottom: 1px solid var(--decoration-color);
 }
@@ -175,16 +158,29 @@ h1 {
   border-bottom: solid 1px var(--decoration-color);
 }
 
-.section {
-  background: var(--background-color);
-}
-
 .concept-block {
   display: grid;
   margin-inline-start: 10px;
   margin-inline-end: 10px;
   padding-block-start: 1px;
   gap: 20px;
+}
+
+.why-block {
+  margin-block-start: 40px;
+}
+
+.why-block-group {
+  display: grid;
+  gap: 20px;
+}
+
+.what-block {
+  margin-block-start: 50px;
+}
+
+.how-block {
+  margin-block-start: 50px;
 }
 
 .what-block-group {
@@ -222,8 +218,6 @@ h3 {
   text-align: left;
   color: var(--text-color);
   background-color: var(--accent-color);
-  /* margin-block-end: 10px;
-  margin-block-start: 20px; */
 }
 
 h4 {
@@ -235,8 +229,6 @@ h4 {
   text-align: left;
   color: var(--text-color);
   background-color: var(--accent-color);
-  /* margin-block-end: 10px;
-  margin-block-start: 20px; */
 }
 
 .simple-block {
@@ -256,6 +248,7 @@ h4 {
 .gallery-section {
   width: 100%;
   height: 100%;
+  margin-block-start: 50px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   display: flex;
@@ -265,14 +258,13 @@ h4 {
 }
 
 .gallery {
-  background: var(--background-color);
+  /* background: var(--background-color); */
   gap: 10px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
-picture {
+img {
   justify-content: center;
   object-fit: cover;
   width: 100%;
@@ -359,56 +351,17 @@ picture {
     justify-self: flex-end;
   }
 
-}
-
-@media (min-width: 1024px) {                      /* Комп */
-
-  .header {
-    min-height: 668px;
-    height: 100vh;
-  }
-
-  .header__theme-menu {
-    justify-self: center;
-    align-self: first baseline;
-    margin: 0;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    margin-block-start: 20px;
-    justify-content: center;
-  }
-
-  h1 {
-    font-family: IBM Plex Mono, sans-serif;
-    font-size: clamp(9.813rem, 6.274rem + 5.53vw, 11.25rem);
-    font-weight: 700;
-    line-height: 129.53px;
-    text-align: left;
-  }
-
-  .header-text {
-    min-width: 491px;
-  }
-
-} 
-
-
-@media (min-width: 768px) {                 /* Планшет */
-
   .why-block {
+    margin-block-start: 40px;
     padding: 0 10px 0 10px;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding-block-start: 20px;
   }
 
-  .multitasking-section {
-    grid-column-start: 2;
-    grid-row-start: 2;
+  .why-block-group {
+    display: grid;
+    gap: 20px;
   }
 
   .what-block {
@@ -459,21 +412,13 @@ picture {
   }
 
   .gallery-item1 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    position: relative;
-    overflow: hidden;
   }
   
   .gallery-item2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -481,9 +426,6 @@ picture {
   }
   
   .gallery-item3 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -491,9 +433,6 @@ picture {
   }
   
   .gallery-item4 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -501,9 +440,6 @@ picture {
   }
   
   .gallery-item5 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -511,10 +447,56 @@ picture {
 
   }
 
+  .footer {
+    margin-block-start: 60px;
+    min-height: 1024px;
+  }
+
+  .footer-decoration {
+    margin: 0;
+    min-width: 748px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-title {
+    font-size: clamp(7.5rem, 0.563rem + 14.45vw, 9.813rem);
+  }
+
 }
 
+@media (min-width: 1024px) {                      /* Комп */
 
-@media (min-width: 1024px) {                /* Комп */
+  .header {
+    min-height: 668px;
+    height: 100vh;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: first baseline;
+    margin: 0;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-block-start: 20px;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: IBM Plex Mono, sans-serif;
+    font-size: clamp(9.813rem, 6.274rem + 5.53vw, 11.25rem);
+    font-weight: 700;
+    line-height: 129.53px;
+    text-align: left;
+  }
+
+  .header-text {
+    min-width: 491px;
+  }
 
   .why-block {
     column-gap: 10px;
@@ -551,46 +533,17 @@ picture {
     max-width: 1440px;
   }
 
-}
-
-@media (min-width: 768px) {                     /* Планшет */
-  
   .footer {
-    margin-block-start: 60px;
-    min-height: 1024px;
+    min-height: 768px;
+    height: 100vh;
   }
 
   .footer-decoration {
-    margin: 0;
-    min-width: 748px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-title {
-    font-size: clamp(7.5rem, 0.563rem + 14.45vw, 9.813rem);
-  }
-}
-
-
-@media (min-width: 1024px) {
-  
-  .footer {
-    min-height: 768px;
-    height: 768px;
-  }
-
-  .footer-decoration {
-    min-height: 768px;
-    height: 768px;
     width: 100%;
   }
   .footer-title {
     padding: 0;
     font-size: clamp(5rem, 6rem + 6vw, 18rem);
   }
-}
 
-
-
+} 
