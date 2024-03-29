@@ -10,6 +10,12 @@
   background-color: var(--background-color);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
   padding: 10px;
   height: 100vh;
@@ -195,10 +201,6 @@ h1 {
   gap: 20px;
 }
 
-.concept-block:last-of-type {
-  margin-block-end: 50px;
-}
-
 .block-item {
   display: grid;
   gap: 10px;
@@ -255,7 +257,7 @@ h4 {
 }
 
 .gallery-section {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
