@@ -8,6 +8,8 @@
   object-fit: cover;
   background-size: auto 100vh;
   background-color: var(--background-color);
+  background-attachment: fixed;
+  margin-block-start: 40px;
 }
 
 .main {
@@ -172,10 +174,6 @@ h1 {
   height: 25px;
   border-left: solid 1px var(--decoration-color);
   border-bottom: solid 1px var(--decoration-color);
-}
-
-.main {
-  margin-block-start: 40px;
 }
 
 .section {
