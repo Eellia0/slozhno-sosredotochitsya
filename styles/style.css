@@ -9,7 +9,6 @@
   background-size: auto 100vh;
   background-color: var(--background-color);
   background-attachment: fixed;
-  margin-block-start: 40px;
 }
 
 .main {
