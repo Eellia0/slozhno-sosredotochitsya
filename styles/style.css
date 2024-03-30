@@ -305,7 +305,6 @@ img {
     padding: 0;
     min-height: 1024px;
     min-width: 768px;
-    display: grid;
   }
 
   h1 {
@@ -359,22 +358,9 @@ img {
     padding-block-start: 20px;
   }
 
-  .why-block-group {
-    display: grid;
-    gap: 20px;
-  }
-
   .what-block {
     margin-block-start: 80px;
     padding: 0 10px 0 10px;
-  }
-
-  h2 {
-    font-family: IBM Plex Mono, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 23.4px;
-    text-align: left;
   }
 
   .subtitle {
@@ -469,7 +455,6 @@ img {
 
   .header {
     min-height: 668px;
-    height: 100vh;
   }
 
   .header__theme-menu {
@@ -479,7 +464,6 @@ img {
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     margin: 0;
     margin-block-start: 20px;
@@ -487,11 +471,8 @@ img {
   }
 
   h1 {
-    font-family: IBM Plex Mono, sans-serif;
     font-size: clamp(9.813rem, 6.274rem + 5.53vw, 11.25rem);
-    font-weight: 700;
     line-height: 129.53px;
-    text-align: left;
   }
 
   .header-text {
@@ -535,14 +516,12 @@ img {
 
   .footer {
     min-height: 768px;
-    height: 100vh;
   }
 
   .footer-decoration {
     width: 100%;
   }
   .footer-title {
-    padding: 0;
     font-size: clamp(5rem, 6rem + 6vw, 18rem);
   }
 
